@@ -1,1 +1,4 @@
-//= require_tree .
+//= require vendor/jquery-2.1.1.min
+//= require vendor/d3.min
+//= require vendor/reveal.js/reveal.min
+//= require _init_reveal

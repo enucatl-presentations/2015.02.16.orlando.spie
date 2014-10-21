@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title= data.page.title || "Presentation"
+    %meta{:charset => "utf-8"}
+    %meta{name: "description", content: "Fifth progress report"}
+    %meta{name: "author", content: "Matteo Abis"}
+
+    %meta{name: "apple-mobile-web-app-capable", content: "yes"}
+    %meta{name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"}
+
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
+
+    = stylesheet_link_tag "all"
+    = javascript_include_tag "vendor/reveal.js/head.min.js"
+
+  %body{:class => page_classes}
+    .reveal
+      %img{src: "images/eth-logo.jpg", alt: "ETH Logo", width: "20%", align: "left"}
+      %img{src: "images/psi-logo.jpg", alt: "PSI Logo", width: "20%", align: "right"}
+      .slides
+        = yield
+    = javascript_include_tag "all.js"
