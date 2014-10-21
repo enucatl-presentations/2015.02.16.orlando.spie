@@ -3,8 +3,8 @@
 
 Progress report for the TOMCAT group.
 
-`post-push` hook to compile and push to `gh-pages`
+`pre-push` hook to compile and push to `gh-pages`
 
 ```
-ln -s ../../post-push .git/hooks/post-push 
+ln -s ../../pre-push .git/hooks/pre-push 
 ```
