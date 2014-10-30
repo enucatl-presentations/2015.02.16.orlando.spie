@@ -16,6 +16,7 @@ theme: 'eth',
 //Optional libraries used to extend on reveal.js
 dependencies: [
     { src: 'javascripts/vendor/reveal.js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'javascripts/vendor/reveal.js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
     { src: 'javascripts/vendor/reveal.js/plugin/math.js', async: true }
 ]
 });
