@@ -1,5 +1,5 @@
 $ ->
-    sigma_phi = (a, v, n, r=0.5) ->
+    sigma_P = (a, v, n, r=0.5) ->
     #assumes a fixed log ratio of the dark field and absorption. The
     #default value comes from the low energy experiment of Zhentian
         1 / (v * Math.pow(a, r) * Math.sqrt(n * a))
@@ -13,7 +13,7 @@ $ ->
             values: d3.range(0.01, 0.99, 0.01).map (x) ->
                 {
                     x: x
-                    sigma: sigma_phi(x, v, n, 0.5)
+                    sigma: sigma_P(x, v, n, 0.5)
                 }
         },
         {
@@ -21,7 +21,7 @@ $ ->
             values: d3.range(0.3, 0.99, 0.01).map (x) ->
                 {
                     x: x
-                    sigma: sigma_phi(x, v, n, 2)
+                    sigma: sigma_P(x, v, n, 2)
                 }
         }
     ]
