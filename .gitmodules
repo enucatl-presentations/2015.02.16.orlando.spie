@@ -1,0 +1,6 @@
+[submodule "source/javascripts/vendor/d3.scatter"]
+	path = source/javascripts/vendor/d3.scatter
+	url = git@github.com:Enucatl/d3.scatter.git
+[submodule "source/javascripts/vendor/d3.line"]
+	path = source/javascripts/vendor/d3.line
+	url = git@github.com:Enucatl/d3.line.git
