@@ -1,5 +1,5 @@
 $ ->
-    sigma_P = (a, v, n, r=0.5) ->
+    window.sigma_P = (a, v, n, r=0.5) ->
     #assumes a fixed log ratio of the dark field and absorption. The
     #default value comes from the low energy experiment of Zhentian
         1 / (v * Math.pow(a, r) * Math.sqrt(n * a))
