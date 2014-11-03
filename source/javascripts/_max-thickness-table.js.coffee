@@ -30,13 +30,13 @@ $ ->
         0.01,
         0.99)
     minimum_transmission_20 = window.bisect(
-        (a) -> comptonService.sigma_phi_no_compton(a, v, n, 2) < sigma_max,
-        0.01,
+        (a) -> window.sigma_P(a, v, n, 2) < sigma_max,
+        0.11,
         0.99)
 
     energy = 100
 
-    d3.json "data/nist.data.json", (json, error) ->
+    d3.json "data/nist.data.json", (error, json) ->
         if error?
             console.warn error
             return
