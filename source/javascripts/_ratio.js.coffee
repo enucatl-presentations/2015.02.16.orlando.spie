@@ -17,7 +17,7 @@ $ ->
             .x_value (d) -> d[1]
             .y_value (d) -> d[2]
             .x_title "dark field"
-            .y_title "log dark field / log absorption"
+            .y_title "log dark field / log transmission"
             .legend_square_size 28
             .margin {top: 100, right: 30, bottom: 50, left: 80}
         scatter

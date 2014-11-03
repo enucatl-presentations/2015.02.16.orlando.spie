@@ -32,7 +32,7 @@ $ ->
         .x_value (d, i) -> d.x
         .y_value (d, i) -> d.sigma
         .interpolation "basis"
-        .x_title "absorption"
+        .x_title "transmission"
         .y_title "phase standard deviation"
         .legend_square_size 28
         .height width * 0.618
