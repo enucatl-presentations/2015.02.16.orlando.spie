@@ -11,6 +11,7 @@
 
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
 
+    = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
     = stylesheet_link_tag "all"
     = javascript_include_tag "vendor/reveal.js/head.min.js"
 
@@ -20,4 +21,5 @@
       %img{src: "images/psi-logo.jpg", alt: "PSI Logo", width: "20%", align: "right"}
       .slides
         = yield
+    = javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"
     = javascript_include_tag "all.js"
