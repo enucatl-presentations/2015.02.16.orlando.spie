@@ -117,3 +117,80 @@
     %h2 \[ \sigma_P(A, R) = [v_0 \sqrt{N_0} A^{R + 1/2}]^{-1}\]
     %p \[\text{prediction error} = \frac{\sigma_\text{predicted} - \sigma_\text{observed}}{\sigma_{\text{predicted}}}\]
     %img{style: "height: 60vh;", src: "images/relative_prediction_error.png"}
+
+  %section
+    %h2 Measuring \( \delta \)
+    %p
+      geometrical inputs + measured dpc value P:
+    %p
+      \\[ \delta = \frac{2 \pi p \tan \theta}{D}P  \]
+
+  %section
+    %h2 Absolute \( \delta \)
+    .row
+      .col-md-2
+      .col-md-8
+        %table.table
+          %thead
+            %tr
+              %th material
+              %th NIST table \( \delta (\cdot 10^{-9}) \) 
+              %th experimental \( \delta (\cdot 10^{-9}) \) 
+          %tbody
+            %tr
+              %td PMMA
+              %td \(102\)
+              %td \(92 \pm 19\)
+            %tr
+              %td PS
+              %td \(90\)
+              %td \(81 \pm 21\)
+            %tr
+              %td HDPE
+              %td \(88\)
+              %td \(87 \pm 14\)
+    %p.alert.alert-success
+      No fit, no calibration, real absolute experimental values!
+    %p.alert.alert-success
+      theoretical values for an energy of 50 keV, which is the average of the simulated spectrum
+
+  %section
+    %h2 Relative \( \delta \)
+    %p
+      Accounts for energy calibration, universally used in publications
+    .row
+      .col-md-2
+      .col-md-8
+        %table.table
+          %thead
+            %tr
+              %th material
+              %th NIST table \( \delta/\delta_\text{PMMA} \) 
+              %th experimental \( \delta/\delta_\text{PMMA} \) 
+          %tbody
+            %tr
+              %td PS
+              %td \(0.89\)
+              %td \(0.88 \pm 0.30\)
+            %tr
+              %td HDPE
+              %td \(0.87\)
+              %td \(0.95 \pm 0.25\)
+    %p.alert.alert-danger
+      Note the large uncertainty, even after 50 hours exposure per sample
+
+%section
+  %h2 Conclusions
+  %h3 New setup
+  %ul
+    %li only official authorization is missing
+    %li excellent performance of the new motors and detector
+    %li.alert.alert-danger gratings still unavailable
+  %h3 Noise model
+  %ul
+    %li no free parameters, reasonable agreement within 50%
+    %li important constraints for applications
+    %li.alert.alert-danger missing link \(R \leftrightarrow \) geometry and energy
+  %h3 Quantitative phase measurements
+  %ul
+    %li very good agreement, even without calibration
