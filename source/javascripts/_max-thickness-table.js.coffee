@@ -45,6 +45,8 @@ $ ->
 
                 t_enter = tab.enter()
                     .append "table"
+                    .classed "table-condensed", true
+                    .classed "table-hover", true
                     .classed "table", true
 
                 t_enter.append "thead"

@@ -2,11 +2,6 @@
   %h2 Grating interferometry on a 160 kVp source
 
 %section{data: {transition: "none"}}
-  %h2 Grating interferometry
-  %h3 Talbot effect
-  #talbot-carpet
-
-%section
   %h2 High-energy ratio independent of the material
   #ratio-df
 
@@ -15,34 +10,30 @@
   %div.spaced
     \\[\begin{align*}
     \\sigma_P &amp;= \frac{1}{v\sqrt{N}}\\
-    &amp;= \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{r + 1/2}}
+    &amp;= \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}}
     \\end{align*} \]
   %div.spaced
     \\[\begin{align*}
     A &amp;= \text{transmission}\\
     B &amp;= \text{dark field}\\
-    r &amp;= \frac{\log B}{\log A}\\
+    R &amp;= \frac{\log B}{\log A}\\
     N &amp;= \text{number of photons}\\
     _0 &amp;= \text{without sample}
     \\end{align*} \]
 
 %section
-  %h2 \( \sigma_P(A, r) \)
+  %h2 \( \sigma_P(A, R) \)
   %div
-    \\(\sigma_P = \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{r + 1/2}} \qquad N_0 = 10^4 \text{ and }v_0 = 10\%\)
+    \\(\sigma_P = \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}} \qquad N_0 = 10^4 \text{ and }v_0 = 10\%\)
   #sigma-absorption
 
 %section
-  %h2 \( \sigma_\text{max} = 2 \pi / 5 \)
-  %ul
-    %li Rose criterion
-    %li Statistical phase wrapping
-  .row
-    .col-md-4#table-30
-      .h3 max thickness (cm) at 30 keV
-    .col-md-4
-    .col-md-4#table-100
-      .h3 max thickness (cm) at 100 keV
+  %h2 \( \sigma_\text{max} = 2 \pi / 5 \Rightarrow \text{max thickness}\)
+  .col-md-4#table-30
+    .h3 max thickness (cm) at 30 keV
+  .col-md-4
+  .col-md-4#table-100
+    .h3 max thickness (cm) at 100 keV
   #sigma-absorption
 
 %section
@@ -56,21 +47,21 @@
 %section
   %section
     %h2 Grating fabrication at KIT
+    Detailed progress on the
+    %a{href: "https://tracker.psi.ch/jira/browse/TCNS-10"} issue tracker
 
   %section
-    %h2 First overplated mask
-    .col-md-8
-      %img{src: "images/S_13-099_T1A013.jpg"}
-    .col-md-8
-      %img{src: "images/S_13-099_T1A006.jpg"}
+    %h2 First overplated mask (June)
+    %img{style: "width: 80%;", src: "images/S_13-099_T1A013.jpg"}
+    %img{style: "width: 80%;", src: "images/S_13-099_T1A006.jpg"}
 
   %section
-    %h2 Second mask, wrong duty cycle
+    %h2 Second mask, wrong duty cycle (August)
     .col-md-12
       %img{src: "images/2014.08.08-resume-mask-wrong-dc.png"}
 
   %section
-    %h2 First irradiation attempt
+    %h2 First irradiation attempt (October)
     The resist is too sensitive
     .col-md-12
       %img{src: "images/S_0895-5A005.png"}
@@ -84,7 +75,45 @@
     %li.alert.alert-warning authorization
 
 %section
-  %h2 Mythen detector
-  %ul
-    %li energy threshold 20 keV
-    %li better PSF with respect to scintillator + camera
+  %section
+    %h2 Mythen detector
+    %ul
+      %li energy threshold 20 keV
+      %li better PSF with respect to scintillator + camera
+      
+  %section
+    %h2 Improved visibility by 50%
+    %p
+      average from 5% to 7.5%
+    %img{style: "width: 70%;", src: "images/visibility.png"}
+      
+  %section
+    %h2 Improved visibility by 50%
+    %p
+      average from 5% to 7.5%
+    %img{style: "width: 70%;", src: "images/pixel_visibility.png"}
+
+%section
+  %section
+    %h2 Quantitative phase experiments
+    %ul
+      %li is \(\sigma_P(A, R)\) a good model?
+      %li can we measure \(\delta\)?
+
+  %section
+    %h2 Wedge samples
+    %p
+      Constant differential phase value proportional to \(\delta\)
+    %ul
+      %li PMMA - Polymethyl methacrylate
+      %li PS - Polystyrene
+      %li HDPE - High-density polyethylene
+
+  %section
+    %h2 \(R \approx 2\)
+    %img{style: "height: 60vh;", src: "images/R_distribution.png"}
+
+  %section
+    %h2 \[ \sigma_P(A, R) = [v_0 \sqrt{N_0} A^{R + 1/2}]^{-1}\]
+    %p \[\text{prediction error} = \frac{\sigma_\text{predicted} - \sigma_\text{observed}}{\sigma_{\text{predicted}}}\]
+    %img{style: "height: 60vh;", src: "images/relative_prediction_error.png"}
