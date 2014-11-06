@@ -78,8 +78,12 @@
   %section
     %h2 Mythen detector
     %ul
-      %li energy threshold 20 keV
+      %li energy threshold >20 keV
       %li better PSF with respect to scintillator + camera
+      %li special module with fan geometry
+      %li 24 bits (was 16)
+      %li 50 &micro;m pixel size (was 80&micro;m)
+      %li detailed SNR studies in Maria's report
       
   %section
     %h2 Improved visibility by 50%
@@ -184,13 +188,14 @@
   %h3 New setup
   %ul
     %li only official authorization is missing
-    %li excellent performance of the new motors and detector
+    %li.alert.alert-success excellent performance of the new motors and detector
     %li.alert.alert-danger gratings still unavailable
   %h3 Noise model
   %ul
-    %li no free parameters, reasonable agreement within 50%
+    %li.alert.alert-success no free parameters, reasonable agreement within 50%
     %li important constraints for applications
     %li.alert.alert-danger missing link \(R \leftrightarrow \) geometry and energy
   %h3 Quantitative phase measurements
   %ul
-    %li very good agreement, even without calibration
+    %li.alert.alert-success very good agreement, even without calibration
+    %li.alert.alert-danger measurement requires many long exposures
