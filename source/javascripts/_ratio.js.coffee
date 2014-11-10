@@ -6,6 +6,7 @@ $ ->
         placeholder = "#ratio-df"
         width = 0.7 * $(placeholder).width()
         factor = 0.618
+        height = width * factor
         json = json.map (d) ->
             {
                 name: d.name.toLowerCase()
@@ -13,13 +14,18 @@ $ ->
             }
         scatter = d3.chart.scatter()
             .width width
-            .height factor * width
+            .height height
             .x_value (d) -> d[1]
             .y_value (d) -> d[2]
             .x_title "dark field"
             .y_title "log dark field / log transmission"
             .legend_square_size width * 0.04
-            .margin {top: 100, right: 30, bottom: 50, left: 80}
+            .margin {
+                top: 0.1 * height
+                right: 0.02 * width
+                bottom: 0.12 * height
+                left: 0.08 * width
+            }
         scatter
             .y_scale()
             .domain [0, 5]

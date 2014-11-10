@@ -79,7 +79,6 @@
     %h2 Mythen detector
     %ul
       %li energy threshold >20 keV
-      %li better PSF with respect to scintillator + camera
       %li special module with fan geometry
       %li 24 bits (was 16)
       %li 50 &micro;m pixel size (was 80&micro;m)
@@ -128,6 +127,25 @@
       geometrical inputs + measured dpc value P:
     %p
       \\[ \delta = \frac{2 \pi p \tan \theta}{D}P  \]
+    %p
+    .row
+      .col-md-4
+      .col-md-4
+        %table.table
+          %thead
+          %tbody
+            %tr
+              %td \( p \)
+              %td period of the grating
+            %tr
+              %td \( D \)
+              %td distance \(G_1-G_2\)
+            %tr
+              %td \( \theta \)
+              %td wedge angle
+            %tr
+              %td \( P \)
+              %td measured DPC value
 
   %section
     %h2 Absolute \( \delta \)
