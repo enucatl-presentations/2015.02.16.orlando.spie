@@ -6,37 +6,6 @@
   #ratio-df
 
 %section
-  %h2 Noise properties of the phase
-  %div.spaced
-    \\[\begin{align*}
-    \\sigma_P &amp;= \frac{1}{v\sqrt{N}}\\
-    &amp;= \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}}
-    \\end{align*} \]
-  %div.spaced
-    \\[\begin{align*}
-    A &amp;= \text{transmission}\\
-    B &amp;= \text{dark field}\\
-    R &amp;= \frac{\log B}{\log A}\\
-    N &amp;= \text{number of photons}\\
-    _0 &amp;= \text{without sample}
-    \\end{align*} \]
-
-%section
-  %h2 \( \sigma_P(A, R) \)
-  %div
-    \\(\sigma_P = \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}} \qquad N_0 = 10^4 \text{ and }v_0 = 10\%\)
-  #sigma-absorption
-
-%section
-  %h2 \( \sigma_\text{max} = 2 \pi / 5 \Rightarrow \text{max thickness}\)
-  .col-md-4#table-30
-    .h3 max thickness (cm) at 30 keV
-  .col-md-4
-  .col-md-4#table-100
-    .h3 max thickness (cm) at 100 keV
-  #sigma-absorption
-
-%section
   %h2 Progress towards the new setup
   %ul
     %li.alert.alert-danger gratings
@@ -100,8 +69,8 @@
   %section
     %h2 Quantitative phase experiments
     %ul
-      %li is \(\sigma_P(A, R)\) a good model?
-      %li can we measure \(\delta\)?
+      %li noise: is \(\sigma_P\) reliable?
+      %li signal: can we measure \(\delta\)?
 
   %section
     %h2 Wedge samples
@@ -124,9 +93,22 @@
     %img{style: "height: 60vh;", src: "images/R_distribution.png"}
 
   %section
-    %h2 \[ \sigma_P(A, R) = [v_0 \sqrt{N_0} A^{R + 1/2}]^{-1}\]
+    %h2 Noise properties of the phase
+    %div.spaced
+      \\[\begin{align*}
+      \\sigma_P &amp;= \frac{2}{v_0\sqrt{N_0}}\\
+      \\end{align*} \]
+    %div.spaced
+      \\[\begin{align*}
+      v &amp;= \text{visibility}\\
+      N &amp;= \text{number of photons}\\
+      _0 &amp;= \text{without sample}
+      \\end{align*} \]
+
+  %section
+    %h2 \[ \sigma_P = 2(v_0 \sqrt{N_0})^{-1}\]
     %p \[\text{prediction error} = \frac{\sigma_\text{predicted} - \sigma_\text{observed}}{\sigma_{\text{predicted}}}\]
-    %img{style: "height: 60vh;", src: "images/relative_prediction_error.png"}
+    %img{style: "height: 60vh;", src: "images/relative_prediction_error_flat_only_meanB.png"}
 
   %section
     %h2 Measuring \( \delta \)
@@ -215,12 +197,13 @@
     %li only official authorization is missing
     %li.alert.alert-success excellent performance of the new motors and detector
     %li.alert.alert-danger gratings still unavailable
-  %h3 Noise model
+  %h3 Noise: sensitivity prediction
   %ul
     %li.alert.alert-success no free parameters, reasonable agreement within 50%
     %li important constraints for applications
     %li.alert.alert-danger missing link \(R \leftrightarrow \) geometry and energy
-  %h3 Quantitative phase measurements
+    %li.alert.alert-danger \(R < \text{ or } > 1 \) should be particularly important
+  %h3 Signal: quantitative phase
   %ul
     %li.alert.alert-success very good agreement, even without calibration
     %li.alert.alert-danger measurement requires many long exposures
