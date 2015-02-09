@@ -1,7 +1,8 @@
-2014.11.18.progress-report
+2015.02.21.orlando.spie
 ==========================
 
-[Progress report](http://enucatl-presentations.github.io/2014.11.18.progress.report) for the TOMCAT group.
+[Presentation](http://enucatl-presentations.github.io/2015.02.16.orlando.spie)
+for the SPIE conference.
 
 git hook to push the compiled version to gh-pages
 -------------------------------------------------
