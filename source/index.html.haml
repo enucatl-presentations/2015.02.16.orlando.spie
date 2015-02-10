@@ -1,58 +1,81 @@
 %section{data: {"background" => "images/ETHbackground.png", "background-size" => "100%", "background-position" => "bottom"}}
-  %h2 Quantitative high-energy phase measurements
+  %h2 High-energy grating interferometry and Compton scattering
+  %h3 <i>M. Abis</i>, Z. Wang, M. Stampanoni
+  %h3 Swiss Federal Institute of Technology, Zurich, Switzerland
+  %h3 Paul Scherrer Institute, Villigen, Switzerland
 
 %section{data: {transition: "none"}}
+  %h2 Why high energies?
+  .spaced
+    %p absorption \( \propto \mathcal{E}^{-3} \)
+    %p phase \( \propto \mathcal{E}^{-1} \)
+
+%section
+  %h2 The technical challenge
+  %h3 grating parameters for constant phase sensitivity
+  %ul
+    %li.addedmargin period   \( p \propto \mathcal{E}^{-1/2} \)
+    %li.addedmargin thickness   \( t \propto \mathcal{E}^{3} \)
+    %li.addedmargin aspect ratio   \( R = 2t/p \propto \mathcal{E}^{7/2} \)
+    %ul
+      %li.addedmargin at <span style="visibility: hidden">0</span>25 keV \( R \sim 30 \) 
+      %li.addedmargin at 100 keV \( R \gt 100 \) 
+
+%section
+  %h2 The edge-on arrangement
+  %img{src: "images/hDPC_setup.png", width: "50%"}
+
+%section
+  %h2 Grating design parameters
+  %table
+    %tbody
+      %tr
+        %td design energy
+        %td 100 keV
+        %td 120 keV
+      %tr
+        %td absorption depth
+        %td{colspan: "2"} 800 &micro;m
+      %tr
+        %td period
+        %td{colspan: "2"} 2.8 &micro;m
+      %tr
+        %td total length
+        %td 54 cm
+        %td 61 cm
+      %tr
+        %td \( G_1 \) material
+        %td gold
+        %td nickel
+
+%section
+  %h2 First images at 100 keV
+  %img{src: "images/images_S00075_S00071.png", width: "50%"}
+  %p Scientific Reports 4, 5198, June 6 2014
+
+%section
+  %h2 High-energy interactions and compton scattering
+  %h3 cross sections for carbon
+  #carbon-cross-section
+
+%section
+  %h2 Connections between the three signals
+  %ul
+    %li.addedmargin absorption &rightarrow; extinction &rightarrow; scattering
+    %li.addedmargin scattering &rightarrow; electron density &rightarrow; phase
+
+%section
+  %h2 Low-energy ratio of dark field and absorption
+  %p carries information about the atomic number
+  %p \[ r = \frac{\log (\text{dark field})}{\log (\text{absorption})} \]
+  %div
+    %img{src: "images/ratio_image.png", width: "28%"}
+  %div Wang et al. <i>Non-invasive classification of microcalcifications with phase-contrast X-ray mammography</i><br> Nat. Comm. 5/2014
+
+%section
   %h2 High-energy ratio independent of the material
   #ratio-df
 
-%section
-  %h2 Progress towards the new setup
-  %ul
-    %li.alert.alert-danger gratings
-    %li.alert.alert-warning source
-    %li.alert.alert-success motors
-    %li.alert.alert-success detector
-
-%section
-  %section
-    %h2 Grating fabrication at KIT
-    Detailed progress on the
-    %a{href: "https://tracker.psi.ch/jira/browse/TCNS-10"} issue tracker
-
-  %section
-    %h2 First overplated mask (June)
-    %img{style: "width: 80%;", src: "images/S_13-099_T1A013.jpg"}
-    %img{style: "width: 80%;", src: "images/S_13-099_T1A006.jpg"}
-
-  %section
-    %h2 Second mask, wrong duty cycle (August)
-    .col-md-12
-      %img{src: "images/2014.08.08-resume-mask-wrong-dc.png"}
-
-  %section
-    %h2 First irradiation attempt (October)
-    The resist is too sensitive
-    .col-md-12
-      %img{src: "images/S_0895-5A005.png"}
-
-%section
-  %h2 New 225 kV source
-  %ul
-    %li.alert.alert-success source
-    %li.alert.alert-success high-voltage generator
-    %li.alert.alert-warning controller
-    %li.alert.alert-warning authorization
-
-%section
-  %section
-    %h2 Mythen detector
-    %ul
-      %li energy threshold >20 keV
-      %li special module with fan geometry
-      %li 24 bits (was 16)
-      %li 50 &micro;m pixel size (was 80&micro;m)
-      %li More about the SNR in Maria's report
-      
   %section
     %h2 Improved visibility by 50%
     %p
@@ -91,24 +114,6 @@
   %section
     %h2 \(R \approx 2\)
     %img{style: "height: 60vh;", src: "images/R_distribution.png"}
-
-  %section
-    %h2 Noise properties of the phase
-    %div.spaced
-      \\[\begin{align*}
-      \\sigma_P &amp;= \frac{2}{v_0\sqrt{N_0}}\\
-      \\end{align*} \]
-    %div.spaced
-      \\[\begin{align*}
-      v &amp;= \text{visibility}\\
-      N &amp;= \text{number of photons}\\
-      _0 &amp;= \text{without sample}
-      \\end{align*} \]
-
-  %section
-    %h2 \[ \sigma_P = 2(v_0 \sqrt{N_0})^{-1}\]
-    %p \[\text{prediction error} = \frac{\sigma_\text{predicted} - \sigma_\text{observed}}{\sigma_{\text{predicted}}}\]
-    %img{style: "height: 60vh;", src: "images/relative_prediction_error_flat_only_meanB.png"}
 
   %section
     %h2 Measuring \( \delta \)
@@ -164,31 +169,6 @@
       No fit, no calibration, real absolute experimental values!
     %p.alert.alert-success
       theoretical values for an energy of 50 keV, which is the average of the simulated spectrum
-
-  %section
-    %h2 Relative \( \delta \)
-    %p
-      Accounts for energy calibration, universally used in publications
-    .row
-      .col-md-2
-      .col-md-8
-        %table.table
-          %thead
-            %tr
-              %th material
-              %th NIST table \( \delta/\delta_\text{PMMA} \) 
-              %th experimental \( \delta/\delta_\text{PMMA} \) 
-          %tbody
-            %tr
-              %td PS
-              %td \(0.89\)
-              %td \(0.88 \pm 0.30\)
-            %tr
-              %td HDPE
-              %td \(0.87\)
-              %td \(0.95 \pm 0.25\)
-    %p.alert.alert-danger
-      Note the large uncertainty, even after 50 hours exposure per sample
 
 %section
   %h2 Conclusions
