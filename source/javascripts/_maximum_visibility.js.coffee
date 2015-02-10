@@ -69,4 +69,4 @@ $ ->
                 $("#max-vis").text "#{visibility.toFixed(1)} %"
                 $("#energy-average-visibility").text "#{average_energy.toFixed(1)} (keV)"
 
-    maximum_visibility "U210 - 160kVp 45deg 1000Air 0Be 0Al 0Cu 0Sn 0W 0Ta 0Wa.csv", 120, 1
+    maximum_visibility "data/spectrum160kVp.csv", 120, 1

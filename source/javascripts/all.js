@@ -1,7 +1,12 @@
 //= require vendor/jquery-2.1.1.min
 //= require vendor/d3.min
+//= require vendor/d3.base.chart/base.chart
+//= require vendor/d3.axes/axes
+//= require vendor/d3.barchart/bar
 //= require vendor/d3.scatter/scatter
 //= require vendor/reveal.js/reveal.min
 //= require _init_reveal
 //= require _ratio
+//= require _polychromatic-visibility
 //= require _maximum_visibility
+//= require _cross_section
