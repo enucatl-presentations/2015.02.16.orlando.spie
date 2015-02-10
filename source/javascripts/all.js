@@ -4,6 +4,7 @@
 //= require vendor/d3.axes/axes
 //= require vendor/d3.barchart/bar
 //= require vendor/d3.scatter/scatter
+//= require vendor/d3.line/line
 //= require vendor/reveal.js/reveal.min
 //= require _init_reveal
 //= require _ratio
