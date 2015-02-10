@@ -89,101 +89,92 @@
     %img{style: "width: 70%;", src: "images/pixel_visibility.png"}
 
 %section
-  %section
-    %h2 Quantitative phase experiments
-    %ul
-      %li noise: is \(\sigma_P\) reliable?
-      %li signal: can we measure \(\delta\)?
+  %h2 Quantitative phase measurements with wedge samples
+  %p
+    Constant differential phase value proportional to \(\delta\)
+  %ul
+    %li PMMA - Polymethyl methacrylate
+    %li PS - Polystyrene
+    %li HDPE - High-density polyethylene
+  .div{style: "height: 10vh"}
+  .row
+    .col-md-4
+      %img{src: "http://www.hollandaquasight.com/wp-content/uploads/2012/11/72.png"}
+    .col-md-4
+      %img{src: "http://www.insulationexpress.co.uk/Images/Products/unnamed1.jpg"}
+    .col-md-4
+      %img{src: "http://www.tassa.co.il/image/users/205979/ftp/my_files/Products/Installation/%D7%A6%D7%A0%D7%A8%D7%AA%20HDPE.jpg?id=9669607"}
 
-  %section
-    %h2 Wedge samples
-    %p
-      Constant differential phase value proportional to \(\delta\)
-    %ul
-      %li PMMA - Polymethyl methacrylate
-      %li PS - Polystyrene
-      %li HDPE - High-density polyethylene
-    .div{style: "height: 10vh"}
-    .row
-      .col-md-4
-        %img{src: "http://www.hollandaquasight.com/wp-content/uploads/2012/11/72.png"}
-      .col-md-4
-        %img{src: "http://www.insulationexpress.co.uk/Images/Products/unnamed1.jpg"}
-      .col-md-4
-        %img{src: "http://www.tassa.co.il/image/users/205979/ftp/my_files/Products/Installation/%D7%A6%D7%A0%D7%A8%D7%AA%20HDPE.jpg?id=9669607"}
-  %section
-    %h2 \(R \approx 2\)
-    %img{style: "height: 60vh;", src: "images/R_distribution.png"}
+%section
+  %h2 Measuring \( \delta \)
+  %p
+    geometrical inputs + measured dpc value P:
+  %p
+    \\[ \delta = \frac{2 \pi p \tan \theta}{D}P  \]
+  %p
+  .row
+    .col-md-4
+    .col-md-4
+      %table.table
+        %thead
+        %tbody
+          %tr
+            %td \( p \)
+            %td period of the grating
+          %tr
+            %td \( D \)
+            %td distance \(G_1-G_2\)
+          %tr
+            %td \( \theta \)
+            %td wedge angle
+          %tr
+            %td \( P \)
+            %td measured DPC value
 
-  %section
-    %h2 Measuring \( \delta \)
-    %p
-      geometrical inputs + measured dpc value P:
-    %p
-      \\[ \delta = \frac{2 \pi p \tan \theta}{D}P  \]
-    %p
-    .row
-      .col-md-4
-      .col-md-4
-        %table.table
-          %thead
-          %tbody
-            %tr
-              %td \( p \)
-              %td period of the grating
-            %tr
-              %td \( D \)
-              %td distance \(G_1-G_2\)
-            %tr
-              %td \( \theta \)
-              %td wedge angle
-            %tr
-              %td \( P \)
-              %td measured DPC value
+%section
+  %h2 Sensitivity by energy
+  %p
+    visibility at an energy \( \mathcal{E} \) a design
+    energy \(\mathcal{E_0}\) and a Talbot order \(m\)
+    \[
+    v(\mathcal{E}) = \frac{2}{\pi} \left\lvert \sin^2
+    \Big(\frac{\pi}{2}\frac{\mathcal{E_0}}{\mathcal{E}}\Big) 
+    \sin
+    \Big(\frac{m\pi}{2}\frac{\mathcal{E_0}}{\mathcal{E}}\Big) 
+    \right\rvert
+    \]
+  #visibility-plot
+  %div Thüring and Stampanoni, <i>Performance and optimization of X-ray grating interferometry</i>, Phil. Trans. A, 2014
 
-  %section
-    %h2 Absolute \( \delta \)
-    .row
-      .col-md-2
-      .col-md-8
-        %table.table
-          %thead
-            %tr
-              %th material
-              %th NIST table \( \delta (\cdot 10^{-9}) \) 
-              %th experimental \( \delta (\cdot 10^{-9}) \) 
-          %tbody
-            %tr
-              %td PMMA
-              %td \(102\)
-              %td \(92 \pm 19\)
-            %tr
-              %td PS
-              %td \(90\)
-              %td \(81 \pm 21\)
-            %tr
-              %td HDPE
-              %td \(88\)
-              %td \(87 \pm 14\)
-    %p.alert.alert-success
-      No fit, no calibration, real absolute experimental values!
-    %p.alert.alert-success
-      theoretical values for an energy of 50 keV, which is the average of the simulated spectrum
+%section
+  %h2 Absolute \( \delta \)
+  .row
+    .col-md-2
+    .col-md-8
+      %table.table
+        %thead
+          %tr
+            %th material
+            %th NIST table \( \delta (\cdot 10^{-9}) \) 
+            %th experimental \( \delta (\cdot 10^{-9}) \) 
+        %tbody
+          %tr
+            %td PMMA
+            %td \(90\)
+            %td \(92 \pm 19\)
+          %tr
+            %td PS
+            %td \(80\)
+            %td \(81 \pm 21\)
+          %tr
+            %td HDPE
+            %td \(79\)
+            %td \(87 \pm 14\)
+  %p.alert.alert-success
+    No fit, no calibration, absolute experimental values
 
 %section
   %h2 Conclusions
-  %h3 New setup
-  %ul
-    %li only official authorization is missing
-    %li.alert.alert-success excellent performance of the new motors and detector
-    %li.alert.alert-danger gratings still unavailable
-  %h3 Noise: sensitivity prediction
-  %ul
-    %li.alert.alert-success no free parameters, reasonable agreement within 50%
-    %li important constraints for applications
-    %li.alert.alert-danger missing link \(R \leftrightarrow \) geometry and energy
-    %li.alert.alert-danger \(R < \text{ or } > 1 \) should be particularly important
   %h3 Signal: quantitative phase
   %ul
     %li.alert.alert-success very good agreement, even without calibration
-    %li.alert.alert-danger measurement requires many long exposures

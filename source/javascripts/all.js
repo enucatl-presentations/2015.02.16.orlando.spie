@@ -4,3 +4,4 @@
 //= require vendor/reveal.js/reveal.min
 //= require _init_reveal
 //= require _ratio
+//= require _maximum_thickness
