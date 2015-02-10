@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPIE Medical Imaging 2015</title>
+<meta charset='utf-8'>
+<meta content='Fifth progress report' name='description'>
+<meta content='Matteo Abis' name='author'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
+<script src="javascripts/vendor/reveal.js/head.min.js" type="text/javascript"></script>
+</head>
+<body class='index'>
+<div class='reveal'>
+<img align='left' alt='ETH Logo' src='images/eth-logo.jpg' width='15%'>
+<img align='right' alt='PSI Logo' src='images/psi-logo.jpg' width='15%'>
+<div class='slides'>
+<section data-background-position='bottom' data-background-size='100%' data-background='images/ETHbackground.png'>
+<h2>High-energy grating interferometry and Compton scattering</h2>
+<h3><i>M. Abis</i>, Z. Wang, M. Stampanoni</h3>
+<h3>Swiss Federal Institute of Technology, Zurich, Switzerland</h3>
+<h3>Paul Scherrer Institute, Villigen, Switzerland</h3>
+</section>
+<section data-transition='none'>
+<h2>Why high energies?</h2>
+<div class='spaced'>
+<p>absorption \( \propto \mathcal{E}^{-3} \)</p>
+<p>phase \( \propto \mathcal{E}^{-1} \)</p>
+</div>
+</section>
+<section>
+<h2>The technical challenge</h2>
+<h3>grating parameters for constant phase sensitivity</h3>
+<ul>
+<li class='addedmargin'>period   \( p \propto \mathcal{E}^{-1/2} \)</li>
+<li class='addedmargin'>thickness   \( t \propto \mathcal{E}^{3} \)</li>
+<li class='addedmargin'>aspect ratio   \( R = 2t/p \propto \mathcal{E}^{7/2} \)</li>
+<ul>
+<li class='addedmargin'>at <span style="visibility: hidden">0</span>25 keV \( R \sim 30 \)</li>
+<li class='addedmargin'>at 100 keV \( R \gt 100 \)</li>
+</ul>
+</ul>
+</section>
+<section>
+<h2>The edge-on arrangement</h2>
+<img src='images/hDPC_setup.png' width='50%'>
+</section>
+<section>
+<h2>Grating design parameters</h2>
+<table>
+<tbody>
+<tr>
+<td>design energy</td>
+<td>100 keV</td>
+<td>120 keV</td>
+</tr>
+<tr>
+<td>absorption depth</td>
+<td colspan='2'>800 &micro;m</td>
+</tr>
+<tr>
+<td>period</td>
+<td colspan='2'>2.8 &micro;m</td>
+</tr>
+<tr>
+<td>total length</td>
+<td>54 cm</td>
+<td>61 cm</td>
+</tr>
+<tr>
+<td>\( G_1 \) material</td>
+<td>gold</td>
+<td>nickel</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>First images at 100 keV</h2>
+<img src='images/images_S00075_S00071.png' width='50%'>
+<p>Scientific Reports 4, 5198, June 6 2014</p>
+</section>
+<section>
+<h2>High-energy interactions and compton scattering</h2>
+<h3>cross sections for carbon</h3>
+<div id='carbon-cross-section'></div>
+</section>
+<section>
+<h2>Connections between the three signals</h2>
+<ul>
+<li class='addedmargin'>absorption &rightarrow; extinction &rightarrow; scattering</li>
+<li class='addedmargin'>scattering &rightarrow; electron density &rightarrow; phase</li>
+</ul>
+</section>
+<section>
+<h2>Low-energy ratio of dark field and absorption</h2>
+<p>carries information about the atomic number</p>
+<p>\[ r = \frac{\log (\text{dark field})}{\log (\text{absorption})} \]</p>
+<div>
+<img src='images/ratio_image.png' width='28%'>
+</div>
+<div>Wang et al. <i>Non-invasive classification of microcalcifications with phase-contrast X-ray mammography</i><br> Nat. Comm. 5/2014</div>
+</section>
+<section>
+<h2>High-energy ratio independent of the material</h2>
+<div id='ratio-df'></div>
+<section>
+<h2>Improved visibility by 50%</h2>
+<p>
+average from 5% to 7.5%
+</p>
+<img src='images/visibility.png' style='width: 70%;'>
+</section>
+<section>
+<h2>Improved visibility by 50%</h2>
+<p>
+average from 5% to 7.5%
+</p>
+<img src='images/pixel_visibility.png' style='width: 70%;'>
+</section>
+</section>
+<section>
+<section>
+<h2>Quantitative phase experiments</h2>
+<ul>
+<li>noise: is \(\sigma_P\) reliable?</li>
+<li>signal: can we measure \(\delta\)?</li>
+</ul>
+</section>
+<section>
+<h2>Wedge samples</h2>
+<p>
+Constant differential phase value proportional to \(\delta\)
+</p>
+<ul>
+<li>PMMA - Polymethyl methacrylate</li>
+<li>PS - Polystyrene</li>
+<li>HDPE - High-density polyethylene</li>
+</ul>
+<div class='div' style='height: 10vh'></div>
+<div class='row'>
+<div class='col-md-4'>
+<img src='http://www.hollandaquasight.com/wp-content/uploads/2012/11/72.png'>
+</div>
+<div class='col-md-4'>
+<img src='http://www.insulationexpress.co.uk/Images/Products/unnamed1.jpg'>
+</div>
+<div class='col-md-4'>
+<img src='http://www.tassa.co.il/image/users/205979/ftp/my_files/Products/Installation/%D7%A6%D7%A0%D7%A8%D7%AA%20HDPE.jpg?id=9669607'>
+</div>
+</div>
+</section>
+<section>
+<h2>\(R \approx 2\)</h2>
+<img src='images/R_distribution.png' style='height: 60vh;'>
+</section>
+<section>
+<h2>Measuring \( \delta \)</h2>
+<p>
+geometrical inputs + measured dpc value P:
+</p>
+<p>
+\[ \delta = \frac{2 \pi p \tan \theta}{D}P  \]
+</p>
+<p></p>
+<div class='row'>
+<div class='col-md-4'></div>
+<div class='col-md-4'>
+<table class='table'>
+<thead></thead>
+<tbody>
+<tr>
+<td>\( p \)</td>
+<td>period of the grating</td>
+</tr>
+<tr>
+<td>\( D \)</td>
+<td>distance \(G_1-G_2\)</td>
+</tr>
+<tr>
+<td>\( \theta \)</td>
+<td>wedge angle</td>
+</tr>
+<tr>
+<td>\( P \)</td>
+<td>measured DPC value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section>
+<h2>Absolute \( \delta \)</h2>
+<div class='row'>
+<div class='col-md-2'></div>
+<div class='col-md-8'>
+<table class='table'>
+<thead>
+<tr>
+<th>material</th>
+<th>NIST table \( \delta (\cdot 10^{-9}) \)</th>
+<th>experimental \( \delta (\cdot 10^{-9}) \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PMMA</td>
+<td>\(102\)</td>
+<td>\(92 \pm 19\)</td>
+</tr>
+<tr>
+<td>PS</td>
+<td>\(90\)</td>
+<td>\(81 \pm 21\)</td>
+</tr>
+<tr>
+<td>HDPE</td>
+<td>\(88\)</td>
+<td>\(87 \pm 14\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class='alert alert-success'>
+No fit, no calibration, real absolute experimental values!
+</p>
+<p class='alert alert-success'>
+theoretical values for an energy of 50 keV, which is the average of the simulated spectrum
+</p>
+</section>
+</section>
+<section>
+<h2>Conclusions</h2>
+<h3>New setup</h3>
+<ul>
+<li>only official authorization is missing</li>
+<li class='alert alert-success'>excellent performance of the new motors and detector</li>
+<li class='alert alert-danger'>gratings still unavailable</li>
+</ul>
+<h3>Noise: sensitivity prediction</h3>
+<ul>
+<li class='alert alert-success'>no free parameters, reasonable agreement within 50%</li>
+<li>important constraints for applications</li>
+<li class='alert alert-danger'>missing link \(R \leftrightarrow \) geometry and energy</li>
+<li class='alert alert-danger'>\(R < \text{ or } > 1 \) should be particularly important</li>
+</ul>
+<h3>Signal: quantitative phase</h3>
+<ul>
+<li class='alert alert-success'>very good agreement, even without calibration</li>
+<li class='alert alert-danger'>measurement requires many long exposures</li>
+</ul>
+</section>
+
+</div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="javascripts/all.js" type="text/javascript"></script>
+</body>
+</html>
