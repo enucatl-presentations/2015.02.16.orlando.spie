@@ -78,12 +78,16 @@
 </table>
 </section>
 <section>
-<h2>First images at 100 keV</h2>
-<img src='images/images_S00075_S00071.png' width='50%'>
-<p>Scientific Reports 4, 5198, June 6 2014</p>
+<h2>Average visibility 7.5%</h2>
+<img src='images/visibility.png' style='width: 70%;'>
 </section>
 <section>
-<h2>High-energy interactions and compton scattering</h2>
+<h2>First images at 100 keV</h2>
+<img src='images/images_S00075_S00071.png' width='50%'>
+<p><i>X-ray phase-contrast imaging at 100 keV on a conventional source</i>, Scientific Reports, 2014</p>
+</section>
+<section>
+<h2>High-energy interactions and Compton scattering</h2>
 <h3>cross sections for carbon</h3>
 <div id='carbon-cross-section'></div>
 </section>
@@ -106,12 +110,6 @@
 <section>
 <h2>High-energy ratio independent of the material</h2>
 <div id='ratio-df'></div>
-<section>
-<h2>Improved visibility by 50%</h2>
-<p>
-average from 5% to 7.5%
-</p>
-<img src='images/visibility.png' style='width: 70%;'>
 </section>
 <section>
 <h2>Improved visibility by 50%</h2>
@@ -120,17 +118,8 @@ average from 5% to 7.5%
 </p>
 <img src='images/pixel_visibility.png' style='width: 70%;'>
 </section>
-</section>
 <section>
-<section>
-<h2>Quantitative phase experiments</h2>
-<ul>
-<li>noise: is \(\sigma_P\) reliable?</li>
-<li>signal: can we measure \(\delta\)?</li>
-</ul>
-</section>
-<section>
-<h2>Wedge samples</h2>
+<h2>Quantitative phase measurements with wedge samples</h2>
 <p>
 Constant differential phase value proportional to \(\delta\)
 </p>
@@ -142,19 +131,15 @@ Constant differential phase value proportional to \(\delta\)
 <div class='div' style='height: 10vh'></div>
 <div class='row'>
 <div class='col-md-4'>
-<img src='http://www.hollandaquasight.com/wp-content/uploads/2012/11/72.png'>
+<img src='images/pmma.jpg'>
 </div>
 <div class='col-md-4'>
-<img src='http://www.insulationexpress.co.uk/Images/Products/unnamed1.jpg'>
+<img src='images/ps.jpg'>
 </div>
 <div class='col-md-4'>
-<img src='http://www.tassa.co.il/image/users/205979/ftp/my_files/Products/Installation/%D7%A6%D7%A0%D7%A8%D7%AA%20HDPE.jpg?id=9669607'>
+<img src='images/hdpe.jpg'>
 </div>
 </div>
-</section>
-<section>
-<h2>\(R \approx 2\)</h2>
-<img src='images/R_distribution.png' style='height: 60vh;'>
 </section>
 <section>
 <h2>Measuring \( \delta \)</h2>
@@ -193,6 +178,22 @@ geometrical inputs + measured dpc value P:
 </div>
 </section>
 <section>
+<h2>Sensitivity by energy</h2>
+<p>
+visibility at an energy \( \mathcal{E} \) a design
+energy \(\mathcal{E_0}\) and a Talbot order \(m\)
+[
+v(\mathcal{E}) = \frac{2}{\pi} \left\lvert \sin^2
+Big(\frac{\pi}{2}\frac{\mathcal{E_0}}{\mathcal{E}}\Big)
+sin
+Big(\frac{m\pi}{2}\frac{\mathcal{E_0}}{\mathcal{E}}\Big)
+right\rvert
+]
+</p>
+<div id='visibility-plot'></div>
+<div>Thüring and Stampanoni, <i>Performance and optimization of X-ray grating interferometry</i>, Phil. Trans. A, 2014</div>
+</section>
+<section>
 <h2>Absolute \( \delta \)</h2>
 <div class='row'>
 <div class='col-md-2'></div>
@@ -208,17 +209,17 @@ geometrical inputs + measured dpc value P:
 <tbody>
 <tr>
 <td>PMMA</td>
-<td>\(102\)</td>
+<td>\(90\)</td>
 <td>\(92 \pm 19\)</td>
 </tr>
 <tr>
 <td>PS</td>
-<td>\(90\)</td>
+<td>\(80\)</td>
 <td>\(81 \pm 21\)</td>
 </tr>
 <tr>
 <td>HDPE</td>
-<td>\(88\)</td>
+<td>\(79\)</td>
 <td>\(87 \pm 14\)</td>
 </tr>
 </tbody>
@@ -226,38 +227,20 @@ geometrical inputs + measured dpc value P:
 </div>
 </div>
 <p class='alert alert-success'>
-No fit, no calibration, real absolute experimental values!
+No fit, no calibration, absolute experimental values
 </p>
-<p class='alert alert-success'>
-theoretical values for an energy of 50 keV, which is the average of the simulated spectrum
-</p>
-</section>
 </section>
 <section>
 <h2>Conclusions</h2>
-<h3>New setup</h3>
-<ul>
-<li>only official authorization is missing</li>
-<li class='alert alert-success'>excellent performance of the new motors and detector</li>
-<li class='alert alert-danger'>gratings still unavailable</li>
-</ul>
-<h3>Noise: sensitivity prediction</h3>
-<ul>
-<li class='alert alert-success'>no free parameters, reasonable agreement within 50%</li>
-<li>important constraints for applications</li>
-<li class='alert alert-danger'>missing link \(R \leftrightarrow \) geometry and energy</li>
-<li class='alert alert-danger'>\(R < \text{ or } > 1 \) should be particularly important</li>
-</ul>
 <h3>Signal: quantitative phase</h3>
 <ul>
 <li class='alert alert-success'>very good agreement, even without calibration</li>
-<li class='alert alert-danger'>measurement requires many long exposures</li>
 </ul>
 </section>
 
 </div>
 </div>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="javascripts/all.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>

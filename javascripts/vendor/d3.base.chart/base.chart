@@ -1,0 +1,67 @@
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  if (d3.chart == null) {
+    d3.chart = {};
+  }
+
+  d3.chart.BaseChart = (function() {
+    function BaseChart() {
+      this.draw = __bind(this.draw, this);
+      if (this.accessors == null) {
+        this.accessors = {};
+      }
+      this.accessors.width = 100;
+      this.accessors.height = 100;
+      this.accessors.margin = {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0
+      };
+      this.accessors.x_scale = d3.scale.linear();
+      this.accessors.y_scale = d3.scale.linear();
+      this.buildAccessors();
+    }
+
+    BaseChart.prototype.buildAccessors = function() {
+      var accessor, name, _ref, _results;
+      _ref = this.accessors;
+      _results = [];
+      for (name in _ref) {
+        accessor = _ref[name];
+        if (this[name] != null) {
+          continue;
+        }
+        _results.push((function(_this) {
+          return function(name, accessor) {
+            return _this[name] = function(value) {
+              if (!arguments.length) {
+                return accessor;
+              }
+              accessor = value;
+              return this;
+            };
+          };
+        })(this)(name, accessor));
+      }
+      return _results;
+    };
+
+    BaseChart.prototype.draw = function(selection) {
+      var me;
+      me = this;
+      return selection.each(function(d, i) {
+        return me._draw(this, d, i);
+      });
+    };
+
+    BaseChart.prototype._draw = function(element, data, i) {
+      throw "_draw not implemented!";
+    };
+
+    return BaseChart;
+
+  })();
+
+}).call(this);
