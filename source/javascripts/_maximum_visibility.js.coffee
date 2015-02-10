@@ -1,6 +1,3 @@
----
----
-
 $ ->
     factor = 0.618
     width = $("#visibility-plot").width()
