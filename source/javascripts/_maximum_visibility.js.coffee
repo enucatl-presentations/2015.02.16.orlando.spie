@@ -1,6 +1,6 @@
 $ ->
     factor = 0.618
-    width = $("#visibility-plot").width()
+    width = 0.5 * $("#visibility-plot").width()
     height = factor * width
     plot = new d3.chart.Bar()
         .width width
