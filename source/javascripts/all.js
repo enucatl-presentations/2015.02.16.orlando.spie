@@ -12,3 +12,4 @@
 //= require _polychromatic-visibility
 //= require _maximum_visibility
 //= require _cross_section
+//= require _delta_beta

@@ -1,63 +1,77 @@
 %section{data: {"background" => "images/ETHbackground.png", "background-size" => "100%", "background-position" => "bottom"}}
   %h2 High-energy grating interferometry and Compton scattering
   %h3 <i>M. Abis</i>, Z. Wang, M. Stampanoni
-  %h3 Swiss Federal Institute of Technology, Zurich, Switzerland
-  %h3 Paul Scherrer Institute, Villigen, Switzerland
+  %p Swiss Federal Institute of Technology, Zurich, Switzerland
+  %p Paul Scherrer Institute, Villigen, Switzerland
 
 %section{data: {transition: "none"}}
   %h2 Why high energies?
   .spaced
     %p absorption \( \propto \mathcal{E}^{-3} \)
     %p phase \( \propto \mathcal{E}^{-1} \)
+    %p
+      %img{src: "images/delta_beta_carbon.png", width: "50%"}
 
 %section
   %h2 The technical challenge
-  %h3 grating parameters for constant phase sensitivity
-  %ul
-    %li.addedmargin period   \( p \propto \mathcal{E}^{-1/2} \)
-    %li.addedmargin thickness   \( t \propto \mathcal{E}^{3} \)
-    %li.addedmargin aspect ratio   \( R = 2t/p \propto \mathcal{E}^{7/2} \)
+  .col-md-6
+    %h3 grating parameters for constant phase sensitivity
     %ul
-      %li.addedmargin at <span style="visibility: hidden">0</span>25 keV \( R \sim 30 \) 
-      %li.addedmargin at 100 keV \( R \gt 100 \) 
+      %li.addedmargin period   \( p \propto \mathcal{E}^{-1/2} \)
+      %li.addedmargin thickness   \( t \propto \mathcal{E}^{3} \)
+      %li.addedmargin.alert.alert-danger aspect ratio   \( R = 2t/p \propto \mathcal{E}^{7/2} \)
+      %ul
+        %li.addedmargin at <span style="visibility: hidden">0</span>25 keV \( R \sim 30 \) 
+        %li.addedmargin at 100 keV \( R \gt 100 \) 
+  .col-md-6
+    %img{src: "images/140217_bosch_p1um_00.png", width: "100%"}
 
 %section
   %h2 The edge-on arrangement
   %img{src: "images/hDPC_setup.png", width: "50%"}
 
 %section
-  %h2 Grating design parameters
-  %table
-    %tbody
-      %tr
-        %td design energy
-        %td 100 keV
-        %td 120 keV
-      %tr
-        %td absorption depth
-        %td{colspan: "2"} 800 &micro;m
-      %tr
-        %td period
-        %td{colspan: "2"} 2.8 &micro;m
-      %tr
-        %td total length
-        %td 54 cm
-        %td 61 cm
-      %tr
-        %td \( G_1 \) material
-        %td gold
-        %td nickel
-  %table
-    %tbody
-      %tr
-        %td acceleration voltage
-        %td 160 kV
-      %tr
-        %td current
-        %td 10 mA
-      %tr
-        %td detector pixel size
-        %td 60 &micro;m
+  .col-md-6
+    %h2 Grating design parameters
+    %table.large
+      %tbody
+        %tr
+          %td design energy
+          %td 100 keV
+          %td 120 keV
+        %tr
+          %td absorption depth
+          %td{colspan: "2"} 800 &micro;m
+        %tr
+          %td period
+          %td{colspan: "2"} 2.8 &micro;m
+        %tr
+          %td total length
+          %td 54 cm
+          %td 61 cm
+        %tr
+          %td \( G_1 \) material
+          %td gold
+          %td nickel
+
+  .col-md-6
+    %h2 Source and detector
+    %table.large
+      %tbody
+        %tr
+          %td acceleration voltage
+          %td 160 kV
+        %tr
+          %td current
+          %td 10 mA
+        %tr
+          %td detector
+          %td silicon photon counting <a href="http://www.psi.ch/detectors/mythen" style="font-variant: small-caps;">mythen</a>
+        %tr
+          %td pixel size
+          %td 60 &micro;m
+  .row
+    %img{style: "width: 70%;", src: "images/side.png"}
 
 %section
   %h2 Performance: average visibility 7.5%
@@ -175,7 +189,7 @@
             %td \(79\)
             %td \(87 \pm 14\)
   %p.alert.alert-success
-    Theoretical values at an energy of 54 keV, average from previous plot
+    Theoretical values at an energy of 54 keV, average from plot on the previous slide
 
 %section
   %h2 Conclusions
