@@ -4,7 +4,7 @@ Reveal.addEventListener 'ready', (event) ->
             console.warn error
             return
         placeholder = "#carbon-cross-section"
-        width = 0.6 * $(placeholder).width()
+        width = 0.5 * document.documentElement.clientWidth
         factor = document.documentElement.clientHeight / document.documentElement.clientWidth
         height = width * factor
         cross_section = new d3.chart.Line()
