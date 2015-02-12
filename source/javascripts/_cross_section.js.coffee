@@ -5,6 +5,8 @@ $ ->
             return
         placeholder = "#carbon-cross-section"
         width = 0.6 * $(placeholder).width()
+        factor = document.documentElement.clientHeight / document.documentElement.clientWidth
+        height = width * factor
         cross_section = new d3.chart.Line()
         axes = new d3.chart.Axes()
             .x_title "energy (keV)"
@@ -20,9 +22,9 @@ $ ->
             .x_value (d, i) -> d.energy
             .y_value (d, i) -> d.cross_section
             .interpolation "basis"
-            .height width * 0.618
+            .height height
             .width width
-            .margin {top: 20, right: 30, bottom: 60, left: 80}
+            .margin {top: width * 0.05, right: height * 0.1, bottom: height * 0.2, left: width * 0.1}
         cross_section
             .x_scale()
             .domain [10, 100]
