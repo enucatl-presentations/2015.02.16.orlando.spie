@@ -1,4 +1,4 @@
-$ ->
+Reveal.addEventListener 'ready', (event) ->
     d3.json "data/cross.section.carbon.json", (error, data) ->
         if error?
             console.warn error
