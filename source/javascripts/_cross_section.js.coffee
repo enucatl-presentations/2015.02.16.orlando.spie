@@ -8,6 +8,11 @@ $ ->
         factor = document.documentElement.clientHeight / document.documentElement.clientWidth
         height = width * factor
         cross_section = new d3.chart.Line()
+        legend = new d3.chart.LineLegend()
+        legend
+            .color_scale cross_section.color_scale()
+            .width width
+            .height height
         axes = new d3.chart.Axes()
             .x_title "energy (keV)"
             .y_title "cross section (cm²/g)"
@@ -38,6 +43,9 @@ $ ->
             .x_axis()
             .ticks(3)
 
+        legend
+            .color_scale cross_section.color_scale()
+
         d3.select placeholder
             .data [data]
             .call cross_section.draw
@@ -47,3 +55,4 @@ $ ->
             .select "g"
             .data [1]
             .call axes.draw
+            .call legend.draw

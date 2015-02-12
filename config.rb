@@ -85,6 +85,8 @@ end
 
 ignore "javascripts/vendor/d3.scatter/LICENSE"
 ignore "javascripts/vendor/d3.scatter/README.md"
+ignore "javascripts/vendor/d3.line.legend/LICENSE"
+ignore "javascripts/vendor/d3.line.legend/README.md"
 ignore "javascripts/vendor/d3.line/LICENSE"
 ignore "javascripts/vendor/d3.line/README.md"
 ignore "javascripts/vendor/d3.axes/LICENSE"
