@@ -7,6 +7,7 @@
 //= require vendor/d3.line/line
 //= require vendor/d3.line.legend/line.legend
 //= require vendor/reveal.js/reveal.min
+//= require vendor/bootstrap.min
 //= require _init_reveal
 //= require _ratio
 //= require _polychromatic-visibility
