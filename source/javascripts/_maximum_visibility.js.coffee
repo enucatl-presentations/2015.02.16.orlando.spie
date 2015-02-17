@@ -50,7 +50,7 @@ $ ->
                         total + datum.visibility * datum.energy
                     , 0) / visibility * 100
 
-                axes.y_title "contribution to visibility / #{energy_interval.toFixed(1)} (keV)"
+                axes.y_title "visibility / #{energy_interval.toFixed(1)} (keV)"
 
                 d3.select "#visibility-plot"
                     .datum with_visibility

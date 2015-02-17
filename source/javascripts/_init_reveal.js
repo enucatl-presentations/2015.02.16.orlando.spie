@@ -12,6 +12,10 @@ Reveal.initialize({
     center: false,
     transition: 'linear',
     theme: 'eth',
+    math: {
+        mathjax: "javascripts/vendor/MathJax/MathJax.js",
+        config: "TeX-AMS-MML_SVG-full.js"
+    },
 
     //Optional libraries used to extend on reveal.js
     dependencies: [
