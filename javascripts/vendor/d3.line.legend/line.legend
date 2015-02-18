@@ -1,0 +1,51 @@
+(function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  d3.chart.LineLegend = (function(_super) {
+    __extends(LineLegend, _super);
+
+    function LineLegend() {
+      if (this.accessors == null) {
+        this.accessors = {};
+      }
+      this.accessors.color_scale = d3.scale.category20();
+      LineLegend.__super__.constructor.apply(this, arguments);
+    }
+
+    LineLegend.prototype._draw = function(element, data, i) {
+      var color_scale, font_size, legend_element_height, legend_group, legend_line_width, legends, width;
+      width = this.width();
+      color_scale = this.color_scale();
+      font_size = $(element).css('font-size');
+      legend_element_height = Math.floor(parseInt(font_size.replace('px', '')) * 1.5);
+      legend_line_width = 0.05 * width;
+      legend_group = d3.select(element).selectAll(".legends").data([color_scale.domain()]);
+      legend_group.enter().append("g").classed("legends", true).attr("transform", "translate(" + width + ", 0)");
+      legend_group.exit().remove();
+      legends = legend_group.selectAll(".legend").data(function(d) {
+        return d;
+      });
+      legends.enter().append("g").classed("legend", true);
+      legends.each(function(d) {
+        var lines, texts;
+        lines = d3.select(this).selectAll("line").data([d]);
+        lines.enter().append("line").classed("legend", true).attr("x1", -legend_line_width).attr("x2", 0).attr("y1", 0.5 * legend_element_height).attr("y2", 0.5 * legend_element_height).attr("stroke", color_scale);
+        lines.exit().remove();
+        texts = d3.select(this).selectAll("text").data([d]);
+        texts.enter().append("text").attr("x", -1.2 * legend_line_width).attr("y", 0.5 * legend_element_height).attr("dy", 0.25 * legend_element_height).style("text-anchor", "end").text(function(d) {
+          return d;
+        });
+        return texts.exit().remove();
+      });
+      legends.attr("transform", function(d, i) {
+        return "translate(0, " + (legend_element_height * i) + ")";
+      });
+      return legends.exit().remove();
+    };
+
+    return LineLegend;
+
+  })(d3.chart.BaseChart);
+
+}).call(this);

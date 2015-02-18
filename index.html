@@ -8,7 +8,6 @@
 <meta content='yes' name='apple-mobile-web-app-capable'>
 <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
 <script src="javascripts/vendor/reveal.js/head.min.js" type="text/javascript"></script>
 </head>
@@ -20,36 +19,45 @@
 <section data-background-position='bottom' data-background-size='100%' data-background='images/ETHbackground.png'>
 <h2>High-energy grating interferometry and Compton scattering</h2>
 <h3><i>M. Abis</i>, Z. Wang, M. Stampanoni</h3>
-<h3>Swiss Federal Institute of Technology, Zurich, Switzerland</h3>
-<h3>Paul Scherrer Institute, Villigen, Switzerland</h3>
+<p>Swiss Federal Institute of Technology, Zurich, Switzerland</p>
+<p>Paul Scherrer Institute, Villigen, Switzerland</p>
 </section>
 <section data-transition='none'>
 <h2>Why high energies?</h2>
 <div class='spaced'>
 <p>absorption \( \propto \mathcal{E}^{-3} \)</p>
 <p>phase \( \propto \mathcal{E}^{-1} \)</p>
+<p>
+<img src='images/delta_beta_carbon.png' width='50%'>
+</p>
 </div>
 </section>
 <section>
 <h2>The technical challenge</h2>
+<div class='col-md-6'>
 <h3>grating parameters for constant phase sensitivity</h3>
 <ul>
 <li class='addedmargin'>period   \( p \propto \mathcal{E}^{-1/2} \)</li>
 <li class='addedmargin'>thickness   \( t \propto \mathcal{E}^{3} \)</li>
-<li class='addedmargin'>aspect ratio   \( R = 2t/p \propto \mathcal{E}^{7/2} \)</li>
+<li class='addedmargin alert alert-danger'>aspect ratio   \( R = 2t/p \propto \mathcal{E}^{7/2} \)</li>
 <ul>
 <li class='addedmargin'>at <span style="visibility: hidden">0</span>25 keV \( R \sim 30 \)</li>
 <li class='addedmargin'>at 100 keV \( R \gt 100 \)</li>
 </ul>
 </ul>
+</div>
+<div class='col-md-6'>
+<img src='images/140217_bosch_p1um_00.png' width='100%'>
+</div>
 </section>
 <section>
 <h2>The edge-on arrangement</h2>
 <img src='images/hDPC_setup.png' width='50%'>
 </section>
 <section>
+<div class='col-md-6'>
 <h2>Grating design parameters</h2>
-<table>
+<table class='large'>
 <tbody>
 <tr>
 <td>design energy</td>
@@ -76,7 +84,10 @@
 </tr>
 </tbody>
 </table>
-<table>
+</div>
+<div class='col-md-6'>
+<h2>Source and detector</h2>
+<table class='large'>
 <tbody>
 <tr>
 <td>acceleration voltage</td>
@@ -87,24 +98,32 @@
 <td>10 mA</td>
 </tr>
 <tr>
-<td>detector pixel size</td>
+<td>detector</td>
+<td>silicon photon counting <a href="http://www.psi.ch/detectors/mythen" style="font-variant: small-caps;">mythen</a></td>
+</tr>
+<tr>
+<td>pixel size</td>
 <td>60 &micro;m</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class='row'>
+<img src='images/side.png' style='width: 70%;'>
+</div>
 </section>
 <section>
 <h2>Performance: average visibility 7.5%</h2>
 <img src='images/visibility.png' style='width: 70%;'>
 </section>
 <section>
-<h2>First images at 100 keV</h2>
+<h2>First images at 100 keV design energy</h2>
 <img src='images/images_S00075_S00071.png' width='50%'>
 <p><i>X-ray phase-contrast imaging at 100 keV on a conventional source</i>, Scientific Reports, 2014</p>
 </section>
 <section>
 <h2>High-energy interactions and Compton scattering</h2>
-<h3>cross sections for carbon</h3>
+<h3><span style="font-variant: small-caps;">nist</span> cross sections for carbon</h3>
 <div id='carbon-cross-section'></div>
 </section>
 <section>
@@ -116,7 +135,7 @@
 </section>
 <section>
 <h2>Low-energy ratio of dark field and absorption</h2>
-<p>carries information about the atomic number</p>
+<p>carries information about the atomic number in addition to particle size</p>
 <p>\[ r = \frac{\log (\text{dark field})}{\log (\text{absorption})} \]</p>
 <div>
 <img src='images/ratio_image.png' width='28%'>
@@ -124,8 +143,20 @@
 <div>Wang et al. <i>Non-invasive classification of microcalcifications with phase-contrast X-ray mammography</i><br> Nat. Comm. 5/2014</div>
 </section>
 <section>
-<h2>High-energy ratio independent of the material</h2>
+<h2>High-energy ratio of dark field and absorption</h2>
+<p>as a function of thickness (dots) and material (colours)</p>
+<div id='ratio-abs'></div>
+</section>
+<section>
+<h2>High-energy ratio of dark field and absorption</h2>
+<p>no dependence on the atomic number Z</p>
+<p>dark field \( \rightarrow 0 = \) thicker, stronger scattering</p>
 <div id='ratio-df'></div>
+</section>
+<section>
+<h2>High-energy ratio of dark field and absorption</h2>
+<p>still sensitive to microstructures smaller than the pixel size</p>
+<div id='ratio-df-all'></div>
 </section>
 <section>
 <h2>Quantitative phase measurements with wedge samples</h2>
@@ -189,8 +220,8 @@ geometrical inputs + measured DPC value P:
 <section>
 <h2>Sensitivity by energy</h2>
 <p>
-visibility at an energy \( \mathcal{E} \) a design
-energy \(\mathcal{E_0}\) and a Talbot order \(m\)
+theoretical visibility at an energy \( \mathcal{E} \), a design
+energy \(\mathcal{E_0}\) and a Talbot order \(m\) (simulated spectrum)
 </p>
 <p>
 \[
@@ -238,25 +269,39 @@ v(\mathcal{E}) = \frac{2}{\pi} \left\lvert \sin^2
 </div>
 </div>
 <p class='alert alert-success'>
-Theoretical values at an energy of 54 keV, average from previous plot
+Theoretical values at an energy of 54 keV, average from plot on the previous slide
+</p>
+<p class='alert alert-success'>
+statistical error \( \propto 1 / \text{visibility} \), large margin for improvement
 </p>
 </section>
 <section>
 <h2>Conclusions</h2>
 <h3>quantitative phase</h3>
 <ul>
-<li class='alert alert-success'>very good agreement, without calibration</li>
+<li class='alert alert-success'>agreement within statistical error</li>
+<li class='alert alert-warning'>could be improved proportionally to the visibility</li>
 </ul>
 <h3>Compton scattering</h3>
 <ul>
-<li class='alert alert-warning'>no more complementarity</li>
+<li class='alert alert-warning'>no more complementarity and atomic number information</li>
 <li class='alert alert-success'>sensitivity to microstructures holds</li>
 </ul>
+</section>
+<section>
+<h2>Acknowledgements</h2>
+<div class='row'>
+<p>The <span style="font-variant: small-caps;">tomcat</span> research group at the Paul Scherrer Institute</p>
+<img src='images/tomcatlogo.jpg' width='40%'>
+</div>
+<div class='row'>
+<p><span style="font-variant: small-caps;">erc</span> grant <span style="font-variant: small-caps;">erc-2012-stg 310005-PhaseX</span></p>
+<img src='images/erclogo.jpg' width='40%'>
+</div>
 </section>
 
 </div>
 </div>
 <script src="javascripts/all.js" type="text/javascript"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>
