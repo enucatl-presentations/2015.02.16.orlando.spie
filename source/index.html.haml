@@ -78,13 +78,13 @@
   %img{style: "width: 70%;", src: "images/visibility.png"}
     
 %section
-  %h2 First images at 100 keV
+  %h2 First images at 100 keV design energy
   %img{src: "images/images_S00075_S00071.png", width: "50%"}
   %p <i>X-ray phase-contrast imaging at 100 keV on a conventional source</i>, Scientific Reports, 2014
 
 %section
   %h2 High-energy interactions and Compton scattering
-  %h3 cross sections for carbon
+  %h3 <span style="font-variant: small-caps;">nist</span> cross sections for carbon
   #carbon-cross-section
 
 %section
@@ -102,8 +102,20 @@
   %div Wang et al. <i>Non-invasive classification of microcalcifications with phase-contrast X-ray mammography</i><br> Nat. Comm. 5/2014
 
 %section
-  %h2 High-energy ratio independent of the material
+  %h2 High-energy ratio of dark field and absorption
+  %p as a function of thickness (dots) and material (colours)
+  #ratio-abs
+
+%section
+  %h2 High-energy ratio of dark field and absorption  
+  %p no dependence on the atomic number Z
+  %p dark field \( \rightarrow 0 = \) thicker, stronger scattering
   #ratio-df
+
+%section
+  %h2 High-energy ratio of dark field and absorption
+  %p still sensitive to microstructures smaller than the pixel size
+  #ratio-df-all
 
 %section
   %h2 Quantitative phase measurements with wedge samples
@@ -190,6 +202,8 @@
             %td \(87 \pm 14\)
   %p.alert.alert-success
     Theoretical values at an energy of 54 keV, average from plot on the previous slide
+  %p.alert.alert-success
+    statistical error \( \propto 1 / \text{visibility} \), large margin for improvement
 
 %section
   %h2 Conclusions

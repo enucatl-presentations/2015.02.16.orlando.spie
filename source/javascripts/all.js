@@ -9,7 +9,9 @@
 //= require vendor/reveal.js/reveal.min
 //= require vendor/bootstrap.min
 //= require _init_reveal
-//= require _ratio
+//= require _ratio_abs
+//= require _ratio_df
+//= require _ratio_df_all
 //= require _polychromatic-visibility
 //= require _maximum_visibility
 //= require _cross_section

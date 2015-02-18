@@ -7,7 +7,7 @@ class d3.chart.LineLegend extends d3.chart.BaseChart
 
     _draw: (element, data, i) ->
                  
-        width = $(element)[0].getBBox().width
+        width = @width()
         # convenience accessors
         color_scale = @color_scale()
 
@@ -23,6 +23,7 @@ class d3.chart.LineLegend extends d3.chart.BaseChart
             .enter()
             .append "g"
             .classed "legends", true
+            .attr "transform", "translate(#{width}, 0)"
             
         legend_group.exit().remove()
 
@@ -42,8 +43,8 @@ class d3.chart.LineLegend extends d3.chart.BaseChart
                 .enter()
                 .append "line"
                 .classed "legend", true
-                .attr "x1", width - legend_line_width
-                .attr "x2", width
+                .attr "x1", -legend_line_width
+                .attr "x2", 0
                 .attr "y1", 0.5 * legend_element_height
                 .attr "y2", 0.5 * legend_element_height
                 .attr "stroke", color_scale
@@ -57,7 +58,7 @@ class d3.chart.LineLegend extends d3.chart.BaseChart
             texts
                 .enter()
                 .append "text"
-                .attr "x", width - 1.2 * legend_line_width
+                .attr "x", -1.2 * legend_line_width
                 .attr "y", 0.5 * legend_element_height
                 .attr "dy", 0.25 * legend_element_height
                 .style "text-anchor", "end"

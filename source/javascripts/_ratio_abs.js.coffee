@@ -3,21 +3,24 @@ $ ->
         if error?
             console.warn error
             return
-        placeholder = "#ratio-df"
+        placeholder = "#ratio-abs"
         width = 0.6 * document.documentElement.clientWidth
         factor = document.documentElement.clientHeight / document.documentElement.clientWidth
         height = width * factor
-        json = json.map (d) ->
-            {
-                name: d.name.toLowerCase()
-                values: d.values
-            }
+        json = json
+            .map (d) ->
+                {
+                    name: d.name.toLowerCase()
+                    values: d.values
+                }
+            .filter (d) ->
+                d.name isnt "coffee" and d.name isnt "rice flour"
         scatter = d3.chart.scatter()
             .width width
             .height height
-            .x_value (d) -> d[1]
+            .x_value (d) -> d[0]
             .y_value (d) -> d[2]
-            .x_title "dark field"
+            .x_title "transmission"
             .y_title "log dark field / log transmission"
             .legend_square_size height / 14
             .margin {

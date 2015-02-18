@@ -12,7 +12,6 @@ Reveal.addEventListener 'ready', (event) ->
         legend
             .color_scale cross_section.color_scale()
             .width width
-            .height height
         axes = new d3.chart.Axes()
             .x_title "energy (keV)"
             .y_title "cross section (cm²/g)"
