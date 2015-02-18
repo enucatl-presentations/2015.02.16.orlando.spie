@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import 'eth-lato-fonts.css';
 /**
  * Default theme for reveal.js.
  *
@@ -6,8 +6,8 @@
  */
 @font-face {
     font-family: 'League Gothic';
-    src: url("../../lib/font/league_gothic-webfont.eot");
-    src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+    src: url("../../fonts/league_gothic-webfont.eot");
+    src: url("../../fonts/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/league_gothic-webfont.woff") format("woff"), url("../../fonts/league_gothic-webfont.ttf") format("truetype"), url("../../fonts/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
     font-weight: normal;
     font-style: normal; 
 }
@@ -22,7 +22,7 @@ body {
 
 .reveal {
     font-family: "Lato", sans-serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
     line-height: 115%;
     font-weight: normal;
     color: black;
@@ -62,7 +62,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-    color: #13daec;
+    color: DarkSlateBlue;
     text-decoration: none;
     -webkit-transition: color .15s ease;
     -moz-transition: color .15s ease;

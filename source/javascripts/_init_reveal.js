@@ -1,22 +1,26 @@
 //Full list of configuration options available here:
 //https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
+    controls: true,
+    progress: true,
+    history: true,
 
-//mine
-height: "65%",
-width: "90%",
-margin: 0,
-center: false,
-transition: 'linear',
-theme: 'eth',
+    //mine
+    height: "65%",
+    width: "90%",
+    margin: 0,
+    center: false,
+    transition: 'linear',
+    theme: 'eth',
+    math: {
+        mathjax: "javascripts/vendor/MathJax/MathJax.js",
+        config: "TeX-AMS-MML_SVG-full.js"
+    },
 
-//Optional libraries used to extend on reveal.js
-dependencies: [
-    { src: 'javascripts/vendor/reveal.js/classList.js', condition: function() { return !document.body.classList; } },
-    { src: 'javascripts/vendor/reveal.js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-    { src: 'javascripts/vendor/reveal.js/plugin/math.js', async: true }
-]
+    //Optional libraries used to extend on reveal.js
+    dependencies: [
+        { src: 'javascripts/vendor/reveal.js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'javascripts/vendor/reveal.js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'javascripts/vendor/reveal.js/plugin/math.js', async: true }
+    ]
 });

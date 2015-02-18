@@ -1,14 +1,14 @@
 $ ->
-    factor = 0.618
-    width = 0.5 * $("#visibility-plot").width()
-    height = factor * width
+    width = 0.5 * document.documentElement.clientWidth
+    factor = document.documentElement.clientHeight / document.documentElement.clientWidth
+    height = width * factor
     plot = new d3.chart.Bar()
         .width width
         .height height
         .margin
             left: 0.10 * width
             top: 0
-            bottom: 0.15 * height
+            bottom: 0.20 * height
             right: 0.05 * width
         .x_value (d) -> d.energy
         .y_value (d) -> d.visibility
@@ -50,7 +50,7 @@ $ ->
                         total + datum.visibility * datum.energy
                     , 0) / visibility * 100
 
-                axes.y_title "contribution to visibility / #{energy_interval.toFixed(1)} (keV)"
+                axes.y_title "visibility / #{energy_interval.toFixed(1)} (keV)"
 
                 d3.select "#visibility-plot"
                     .datum with_visibility

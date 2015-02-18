@@ -4,8 +4,8 @@ $ ->
             console.warn error
             return
         placeholder = "#ratio-df"
-        width = 0.7 * $(placeholder).width()
-        factor = 0.618
+        width = 0.6 * document.documentElement.clientWidth
+        factor = document.documentElement.clientHeight / document.documentElement.clientWidth
         height = width * factor
         json = json.map (d) ->
             {
@@ -19,7 +19,7 @@ $ ->
             .y_value (d) -> d[2]
             .x_title "dark field"
             .y_title "log dark field / log transmission"
-            .legend_square_size width * 0.04
+            .legend_square_size height / 14
             .margin {
                 top: 0.1 * height
                 right: 0.02 * width
