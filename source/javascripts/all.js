@@ -1,5 +1,6 @@
 //= require vendor/jquery-2.1.1.min
 //= require vendor/d3.min
+//= require_tree ./data/
 //= require vendor/d3.base.chart/base.chart
 //= require vendor/d3.axes/axes
 //= require vendor/d3.barchart/bar

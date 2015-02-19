@@ -1,3 +1,4 @@
+window.spectrum160kVp = d3.csv.parse('''
 energy,photons
 16,1.807248e+7
 17,1.894415e+7
@@ -144,3 +145,8 @@ energy,photons
 158,119989.6
 159,59258.46
 160,0
+''',
+    (d) ->
+        energy: parseFloat(d.energy)
+        photons: parseFloat(d.photons)
+)
